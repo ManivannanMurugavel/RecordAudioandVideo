@@ -82,7 +82,7 @@ player.on('timestamp', function() {
         formData.append('name', binaryData['name']);
         formData.append('stream', binaryData);
 
-        xhr('servers/upload-video.php', formData, function (fName) {
+        xhr('http://0.0.0.0:5000/stream', formData, function (fName) {
             console.log("Video succesfully uploaded !",fName);
         });
 
